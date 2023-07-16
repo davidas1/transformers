@@ -536,12 +536,12 @@ def is_tokenizers_available():
 
 def is_vision_available():
     _pil_available = importlib.util.find_spec("PIL") is not None
-    if _pil_available:
-        try:
-            package_version = importlib_metadata.version("Pillow")
-        except importlib_metadata.PackageNotFoundError:
-            return False
-        logger.debug(f"Detected PIL version {package_version}")
+    #if _pil_available:
+    #    try:
+    #        package_version = importlib_metadata.version("Pillow")
+    #    except importlib_metadata.PackageNotFoundError:
+    #        return False
+    #    logger.debug(f"Detected PIL version {package_version}")
     return _pil_available
 
 
